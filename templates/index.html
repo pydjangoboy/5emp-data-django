@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Show Details</title>
+</head>
+<body>
+<table align="center" border="2">
+    <h1 align="center">Employees data</h1>
+    <tr bgcolor="aqua">
+        <th>idno</th>
+        <th>name</th>
+        <th>salary</th>
+        <th>designations</th>
+        <th>address</th>
+    </tr>
+    {% for x,y in dict.items %}
+        <tr bgcolor="#faebd7">
+            <td>{{ x }}</td>
+            <td>{{ y.name }}</td>
+            <td>{{ y.salary }}</td>
+            <td>{{ y.designations }}</td>
+            <td>{{ y.address }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
